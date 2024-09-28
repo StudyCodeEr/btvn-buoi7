@@ -12,18 +12,40 @@
         }
         body.dark {
             background: #1e2122;
+            transition: var(--transition-effect);
         }
         .container.dark2 {
             background-color: #181a1b;
             color: white;
+            transition: var(--transition-effect);
         }
-        body.dark .skills ul li, body.dark .experience ul li, body.dark .about ul li, body.dark .homework ul li {
+        body.dark .skills ul li, body.dark .experience ul li, body.dark .about ul li, body.dark .homework ul li , body.dark .homework label{
         background-color: #303436;
         color: white;
         }
-
+        body.dark .homework a{
+            color: white;
+        }
+        body.dark .homework{
+            background-color: #181a1b;
+            color: white;
+        }
+        body.dark .icon a{
+            background-color: #181a1b;
+            color: white;
+        }
         section.dark2 {
             background: #181a1b;
+        }
+        body.dark .home {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            background-image:url(4c61f8dbda3404dce696a74c25236d75.gif);
+            background-size: cover;
+            background-position: center; /* Căn giữa ảnh */
+            z-index: 1000;
         }
     </style>
 </head>
