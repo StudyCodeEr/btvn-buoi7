@@ -1,0 +1,365 @@
+:root{
+   --transition-effect: 0.25s cubic-bezier(.25, -0.59, .82, 1.66);
+}
+body {
+    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+body.dark{
+    background: #1d2021;
+}
+.container.dark2 {
+    background-color: #2e2e2e;
+}
+.skills ul li, .experience ul li, .homework ul li, .about ul li {
+    background-color: #3a3a3a; /* Nền cho các danh sách khi dark mode */
+}
+header {
+    background-color: #333;
+    margin-left: -20px;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+section.dark2{
+    background: #1e2122;
+}
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px 0 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+header nav a:hover {
+    background-color: #555;
+}
+.menu-icon {
+    cursor: pointer;
+    font-size: 25px; /* Kích thước icon */
+    color: white; /* Màu sắc icon */
+    display: none;
+    align-items: center;
+    justify-content: right;
+    margin-right: 20px;
+}
+.menu-checkbox {
+    display: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+}
+
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section h2:after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: #4CAF50;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.home, .about, .skills, .experience, .contact, .homework {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-image:url(4c61f8dbda3404dce696a74c25236d75.gif);
+    background-size: cover;
+    background-position: center; /* Căn giữa ảnh */
+}
+
+.home img {
+    border-radius: 60%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+
+.home h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.skills ul, .experience ul, .homework ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li, .experience ul li, .homework ul li {
+    background-color: #e9e9e9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.skills ul li:hover, .about ul li:hover, .experience ul li:hover, .homework ul li:hover {
+    background-color: #d3d3d3;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form input, .contact form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+.about  ul li{
+    background-color: #e9e9e9;
+    margin: 10px ;
+    padding: 15px;
+    margin-left: -35px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    list-style-type: none;
+}
+.about {
+    padding-bottom: 100px;
+}
+.skills{
+    padding-bottom: 100px;
+}
+.experience{
+    padding-bottom: 100px;
+}
+.homework{
+    padding-bottom: 100px;
+}
+.contact{
+    padding-bottom: 100px;
+}
+a{
+    color: #333;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.icon{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+/* Ẩn tất cả các checkbox */
+.toggle {
+    display: none;
+}
+
+/* Định dạng cho tiêu đề buổi học (label) */
+.buoi label {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover cho label */
+.buoi label:hover {
+    background-color: #ddd;
+}
+
+/* Ẩn các danh sách bài tập khi checkbox chưa được chọn */
+.buoi ul {
+    display: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* Hiển thị danh sách khi checkbox được chọn */
+.toggle:checked + label + ul {
+    display: block;
+}
+
+/* Định dạng cho danh sách bài tập */
+.buoi ul li {
+    padding: 5px 0;
+}
+#wrapper1, #wrapper2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 4vh;
+}
+.switch-toggle{
+    width: 45px;
+    height: 25px;
+    appearance: none;
+    background: #83d8ff;
+    border-radius: 26px;
+    position: relative;
+    cursor: pointer;
+    bottom: 3px;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, .3);
+    transition: var(--transition-effect);
+}
+.switch-toggle::before{
+    content: "";
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background: #efe2bf;
+    border-radius: 50%;
+    top: 1.6px;
+    left: 1.6px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+    transition: var(--transition-effect)
+}
+.switch-toggle:checked{
+    background: #749dd6;
+
+}
+.switch-toggle:checked:before{
+    left: 21px;
+    background: #4e4e4e;
+}
+@media(max-width: 1000px){
+    header nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+    }    
+}
+@media(max-width: 800px){
+    header nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0;
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+    }    
+}
+@media(max-width: 700px) {
+    /* Ẩn menu ban đầu */
+    header nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+    #wrapper1{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 4vh;
+    }
+
+    /* Hiển thị icon */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Khi checkbox được chọn, hiển thị menu */
+    .menu-checkbox:checked + .menu-icon + nav {
+        display: flex;
+        top: 59px;
+    }
+
+    header nav a {
+        padding: 10px;
+        border-top: 1px solid #444;
+        text-transform: uppercase;
+        border-bottom: .1px solid white;
+    }
+    header {
+        background-color: #333;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        height: 4%;
+    }
+    .switch-toggle{
+        width: 36px;
+        height: 21px;
+        appearance: none;
+        background: #ffffff;
+        border-radius: 26px;
+        position: relative;
+        cursor: pointer;
+        justify-content: right;
+        align-items: right;
+    }
+    #wrapper2{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        min-height: 4vh;
+        margin-top: 5px;
+        margin-right: 2%;
+    }
+    .switch-toggle::before{
+        content: "";
+        width: 17.6px;
+        height: 17.6px;
+        position: absolute;
+        background: #70c588;
+        border-radius: 50%;
+        top: 1.4px;
+        left: 2.5px;
+    }
+    .switch-toggle:checked:before{
+        left: 16px;
+    }
+}
