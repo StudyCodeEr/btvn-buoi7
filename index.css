@@ -18,6 +18,46 @@ h1, h2{
 p{
     transition: var(--transition-effect);
 }
+html {
+    scroll-behavior: smooth;
+}
+body.dark {
+    background: #1e2122;
+    transition: var(--transition-effect);
+}
+.container.dark2 {
+    background-color: #181a1b;
+    color: white;
+    transition: var(--transition-effect);
+}
+body.dark .skills ul li, body.dark .experience ul li, body.dark .about ul li, body.dark .homework ul li , body.dark .homework label{
+background-color: #303436;
+color: white;
+}
+body.dark .homework a{
+    color: white;
+}
+body.dark .homework{
+    background-color: #181a1b;
+    color: white;
+}
+body.dark .icon a{
+    background-color: #181a1b;
+    color: white;
+}
+section.dark2 {
+    background: #181a1b;
+}
+body.dark .home {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-image:url(4c61f8dbda3404dce696a74c25236d75.gif);
+    background-size: cover;
+    background-position: center; /* Căn giữa ảnh */
+    z-index: 1000;
+}
 header {
     background-color: #333;
     margin-left: -20px;
@@ -332,7 +372,7 @@ a{
         width: 36px;
         height: 21px;
         appearance: none;
-        background: #ffffff;
+        background: #83d8ff;
         border-radius: 26px;
         position: relative;
         cursor: pointer;
@@ -352,7 +392,7 @@ a{
         width: 17.6px;
         height: 17.6px;
         position: absolute;
-        background: #70c588;
+        background: #efe2bf;
         border-radius: 50%;
         top: 1.4px;
         left: 2.5px;
