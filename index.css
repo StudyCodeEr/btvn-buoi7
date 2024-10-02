@@ -67,6 +67,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    height: 30px;
 }
 
 header nav {
@@ -333,7 +334,7 @@ a{
         text-align: center;
         background-color: #333;
         position: absolute;
-        top: 60px;
+        top: 10%;
         left: 0;
         width: 100%;
     }
@@ -352,7 +353,7 @@ a{
     /* Khi checkbox được chọn, hiển thị menu */
     .menu-checkbox:checked + .menu-icon + nav {
         display: flex;
-        top: 59px;
+        top: 100%;
     }
 
     header nav a {
