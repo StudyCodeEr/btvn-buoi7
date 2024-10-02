@@ -9,9 +9,7 @@ body {
     scroll-behavior: smooth;
     transition: var(--transition-effect);
 }
-a{
-    transition: var(--transition-effect);
-}
+
 h1, h2{
     transition: var(--transition-effect);
 }
@@ -221,14 +219,24 @@ a{
     color: #333;
     margin-left: 20px;
     margin-right: 20px;
+    transition: var(--transition-effect);
 }
 .icon{
     text-align: center;
 }
+i{
+    font-size: 40px;
+}
 a{
     text-decoration: none;
+    font-size: 40px;
 }
-
+.icon a:hover i {
+    color: #555; /* Hiệu ứng hover */
+}
+.icon i {
+    transition: var(--transition-effect);
+}
 /* Ẩn tất cả các checkbox */
 .toggle {
     display: none;
