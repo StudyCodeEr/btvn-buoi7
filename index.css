@@ -212,6 +212,34 @@ header nav a:hover {
 .homework{
     padding-bottom: 100px;
 }
+.scollhomework {
+    overflow-y: scroll;
+    max-height: 300px;
+    scrollbar-color: #ffffff;
+}
+/* Đổi màu thanh cuộn chung */
+::-webkit-scrollbar {
+    width: 12px; /* Độ rộng của thanh cuộn dọc */
+    height: 12px; /* Độ cao của thanh cuộn ngang */
+}
+
+/* Màu nền của thanh cuộn */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Màu của thanh trượt */
+::-webkit-scrollbar-thumb {
+    background-color: #bdbdbd; /* Màu của thanh trượt */
+    border-radius: 10px; /* Bo tròn thanh trượt */
+    border: 2px solid #f1f1f1; /* Để thêm khoảng cách */
+}
+
+/* Hiệu ứng khi rê chuột vào thanh trượt */
+::-webkit-scrollbar-thumb:hover {
+    background: #9c9c9c; /* Đổi màu khi rê chuột vào */
+}
+
 .contact{
     padding-bottom: 100px;
 }
@@ -247,6 +275,7 @@ a{
     cursor: pointer;
     background-color: #f4f4f4;
     padding: 10px;
+    padding-left: 20px;
     display: block;
     border-radius: 5px;
     margin-bottom: 10px;
