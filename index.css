@@ -1,6 +1,21 @@
-:root{
-   --transition-effect: 0.25s cubic-bezier(.25, -0.59, .82, 1.66);
+/* Đặt hiệu ứng trượt với thời gian và easing từ biến trong :root */
+.section {
+    transform: translateX(-100%); /* Trượt từ bên ngoài bên trái */
+    opacity: 0;
+    transition: transform var(--transition-effect), opacity var(--transition-effect);
 }
+
+/* Khi lớp này được thêm vào, các mục chính sẽ trượt vào và hiện ra */
+.section.slide-in {
+    transform: translateX(0); /* Vị trí trở lại bình thường */
+    opacity: 1;
+}
+
+/* :root đã có sẵn */
+:root {
+   --transition-effect: 1.2s cubic-bezier(0.23, 1, 0.32, 1); /* Thời gian và easing mượt mà */
+}
+
 body {
     margin: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
